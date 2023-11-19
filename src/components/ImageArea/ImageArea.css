@@ -1,0 +1,63 @@
+/* Dashboard.css (or your existing CSS file) */
+.image-board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vmax;
+  margin-top: 1vmax;
+  margin-bottom: 5vmax;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  height: auto;
+}
+
+.generated-image {
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.image-container:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn button {
+  scale: 1;
+  background-color: transparent; 
+  border: 1px transparent; 
+  border-radius: 5px;
+  cursor: pointer;
+  /* color: black; */
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px;
+  transition: color 0.3s;
+}
+
+.delete-btn button svg {
+  margin-bottom: 5px;
+  scale: 1;
+}
+
+.delete-btn button:hover {
+  color: darkred;
+}
